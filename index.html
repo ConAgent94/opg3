@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Sting maniplulation</title>
+</head>
+
+<body>
+    <h1>String manipilation</h1>
+    <div id="app">
+
+        <input id="inputField" v-model="word" placeholder="word">
+        <button id="button" style="margin: 5px;" v-on:click="show(word)" class="btn btn-primary">Show</button>
+
+
+        <ol>
+            <li v-for="w in words">
+                {{w}}
+            </li>
+
+        </ol>
+
+
+        <table class="table table-striped">
+
+            <tbody>
+                <tr v-for="w in words">
+                    <th scope="row">1</th>
+                    <td>{{w}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
